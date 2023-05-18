@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background:linear-gradient(to right, rgb(247, 247, 255), blue) ;
+}
+
+.calculadora{
+    background-color: rgb(214, 214, 214);
+    border-radius: 30px;
+    box-shadow: 5px 10px 100px black;
+
+    width: 500px;
+    height: 600px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calculadora-resultado{
+    background-color: white;
+    border-radius: 10px;
+
+    width: 400px;
+    height: 100px;
+
+    margin: 30px;
+}
+
+.calculadora-butao{
+    background-color: aquamarine;
+    width: 400px;
+    height: 450px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.calculadora-butao-numeros button{
+    background-color: rgb(201, 201, 201);
+    border-radius: 5px;
+
+    
+    width: 80px;
+    height: 80px;
+}
+
+.butao123, .butao456, .butao789{
+    width: 300px;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.butao0{
+    width: 300px;
+    height: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora-butao-sinais{
+    width: 100px;
+    height: 450px;
+
+    background-color: bisque;
+}
