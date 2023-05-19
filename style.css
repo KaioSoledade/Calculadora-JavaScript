@@ -19,7 +19,7 @@ body{
 .calculadora{
     background-color: rgb(214, 214, 214);
     border-radius: 30px;
-    box-shadow: 5px 10px 100px black;
+    box-shadow: 50px 100px 60px black;
 
     width: 500px;
     height: 600px;
@@ -39,9 +39,12 @@ body{
 
     margin: 30px;
 }
+.calculadora-resultado h1{
+    margin: 40px 0 0 10px
+}
 
 .calculadora-butao{
-    background-color: aquamarine;
+    background-color: ;
     width: 400px;
     height: 450px;
 
@@ -68,17 +71,37 @@ body{
     align-items: center;
 }
 .butao0{
-    width: 300px;
+    margin: 0 0 0 100px;
+    width: 200px;
     height: 100px;
     
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .calculadora-butao-sinais{
     width: 100px;
-    height: 450px;
+    height: 400px;
 
-    background-color: bisque;
+    background-color: ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.calculadora-butao-sinais button{
+    background-color: rgb(201, 201, 201);
+    border-radius: 5px;
+
+    
+    width: 80px;
+    height: 80px;
+}
+
+.calculadora-butao button{
+    font-size: 40px;
+}
+
