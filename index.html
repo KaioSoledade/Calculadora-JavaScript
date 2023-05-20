@@ -46,44 +46,73 @@
         </div>
         <div class="calculadora2">
             <div>
-                <input type="text"> <p>+</p> <input type="text"> <p>=</p> <section> <p>12</p></section> 
+                <input type="text" class="valor1-1"> <p>+</p> <input type="text" class="valor2-1"> <p>=</p> <section> <p class="resultado2-1"></p></section> <button class="cal-resut2" onclick="somar1()">=</button>
             </div>
             <div>
-                <input type="text"> <p>-</p> <input type="text"> <p>=</p> <section> <p>12</p></section>
+                <input type="text" class="valor1-2"> <p>-</p> <input type="text" class="valor2-2"> <p>=</p> <section> <p class="resultado2-2"></p></section> <button class="cal-resut2" onclick="somar2()">=</button>
             </div>
             <div>
-                <input type="text"> <p>x</p> <input type="text"> <p>=</p> <section> <p>12</p></section>
+                <input type="text" class="valor1-3"> <p>x</p> <input type="text" class="valor2-3"> <p>=</p> <section> <p class="resultado2-3"></p></section> <button class="cal-resut2" onclick="somar3()">=</button>
             </div>
             <div>
-                <input type="text"> <p>/</p> <input type="text"> <p>=</p> <section> <p>12</p></section>
+                <input type="text" class="valor1-4"> <p>/</p> <input type="text" class="valor2-4"> <p>=</p> <section> <p class="resultado2-4"></p></section> <button class="cal-resut2" onclick="somar4()">=</button>
             </div>
         </div>
     </main>
     <script>
-        var a = 5
-        var b = 7
-        var soma = a + b 
-        
-        var fundo = window.document.body;
+     
+        function somar1(){
+            var button1 = document.querySelector('input.valor1-1')
+            var button2 = document.querySelector('input.valor2-1')            
+            var valor = window.document.querySelector('p.resultado2-1')
 
-        var result1 = window.document.getElementsByTagName('button')[1]
+            var n1 = Number(button1.value)
+            var n2 = Number(button2.value)
 
-        window.document.write(result1.innerText)
+            var calcular = n1 + n2
 
-        var d = window.document.getElementById('rest')
-        d.innerText = soma
-
-
-        function somar(){
-           var button1 = document.querySelector('valor1')
-           var n1 = Number(button1.value)
-           
-           var button2 = document.querySelector('valor2')
-           var n1 = Number(button2.value)
-
-           var calcular = n1 + n2
-           var d = calcular
+            valor.innerHTML = calcular
         }
+
+        function somar2(){
+            var button1 = document.querySelector('input.valor1-2')
+            var button2 = document.querySelector('input.valor2-2')            
+            var valor = window.document.querySelector('p.resultado2-2')
+
+            var n1 = Number(button1.value)
+            var n2 = Number(button2.value)
+
+            var calcular = n1 - n2
+
+            valor.innerHTML = calcular
+        }
+
+        function somar3(){
+            var button1 = document.querySelector("input.valor1-3")
+            var button2 = document.querySelector('input.valor2-3')
+            var valor = window.document.querySelector('p.resultado2-3')
+
+            var n1 = Number(button1.value)
+            var n2 = Number(button2.value)
+
+            var calcular = n1 * n2
+
+            valor.innerHTML = calcular
+        }
+
+        function somar4(){
+            var button1 = document.querySelector("input.valor1-4")
+            var button2 = document.querySelector('input.valor2-4')
+            var valor = window.document.querySelector('p.resultado2-4')
+
+            var n1 = Number(button1.value)
+            var n2 = Number(button2.value)
+
+            var calcular = n1 / n2
+
+            valor.innerHTML = calcular
+        }
+
 
     </script>
 </body>
