@@ -11,28 +11,28 @@
     <main>
         <div class="calculadora">
             <div class="calculadora-resultado">
-                <h1>calculadora</h1>
+                <h1 id="rest"></h1>
             </div>
             <div class="calculadora-butao">
                 <div class="calculadora-butao-numeros">
                     <div class="butao123">
-                         <button id="1">1</button>
-                         <button id="2">2</button>
-                         <button id="3">3</button>
+                         <button id="1 valor">1</button>
+                         <button id="2 valor">2</button>
+                         <button id="3 valor">3</button>
                     </div>
                     <div class="butao456">
-                        <button id="4">4</button>
-                        <button id="5">5</button>
-                        <button id="6">6</button>
+                        <button id="4 valor">4</button>
+                        <button id="5 valor">5</button>
+                        <button id="6 valor">6</button>
                     </div>
                     <div class="butao789">
-                        <button id="7">7</button>
-                        <button id="8">8</button>
-                        <button id="9">9</button>
+                        <button id="7 valor">7</button>
+                        <button id="8 valor">8</button>
+                        <button id="9 valor">9</button>
                     </div>
                     <div class="butao0">
-                        <button id="0">0</button>
-                        <button id="igual">=</button>
+                        <button id="0 valor">0</button>
+                        <button id="igual resultado" onclick="somar()">=</button>
                     </div>
                     
                 </div>
@@ -44,7 +44,47 @@
                 </div>
             </div>
         </div>
+        <div class="calculadora2">
+            <div>
+                <input type="text"> <p>+</p> <input type="text"> <p>=</p> <section> <p>12</p></section> 
+            </div>
+            <div>
+                <input type="text"> <p>-</p> <input type="text"> <p>=</p> <section> <p>12</p></section>
+            </div>
+            <div>
+                <input type="text"> <p>x</p> <input type="text"> <p>=</p> <section> <p>12</p></section>
+            </div>
+            <div>
+                <input type="text"> <p>/</p> <input type="text"> <p>=</p> <section> <p>12</p></section>
+            </div>
+        </div>
     </main>
-    <script src="script.js "></script>
+    <script>
+        var a = 5
+        var b = 7
+        var soma = a + b 
+        
+        var fundo = window.document.body;
+
+        var result1 = window.document.getElementsByTagName('button')[1]
+
+        window.document.write(result1.innerText)
+
+        var d = window.document.getElementById('rest')
+        d.innerText = soma
+
+
+        function somar(){
+           var button1 = document.querySelector('valor1')
+           var n1 = Number(button1.value)
+           
+           var button2 = document.querySelector('valor2')
+           var n1 = Number(button2.value)
+
+           var calcular = n1 + n2
+           var d = calcular
+        }
+
+    </script>
 </body>
 </html>
