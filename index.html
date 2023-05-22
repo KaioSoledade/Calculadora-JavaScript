@@ -9,55 +9,64 @@
 </head>
 <body>
     <main>
-        <div class="calculadora">
-            <div class="calculadora-resultado">
-                <h1 id="rest"></h1>
-            </div>
-            <div class="calculadora-butao">
-                <div class="calculadora-butao-numeros">
-                    <div class="butao123">
-                         <button id="1 valor">1</button>
-                         <button id="2 valor">2</button>
-                         <button id="3 valor">3</button>
-                    </div>
-                    <div class="butao456">
-                        <button id="4 valor">4</button>
-                        <button id="5 valor">5</button>
-                        <button id="6 valor">6</button>
-                    </div>
-                    <div class="butao789">
-                        <button id="7 valor">7</button>
-                        <button id="8 valor">8</button>
-                        <button id="9 valor">9</button>
-                    </div>
-                    <div class="butao0">
-                        <button id="0 valor">0</button>
-                        <button id="igual resultado" onclick="somar()">=</button>
-                    </div>
-                    
+        <div class="container1">
+            <div class="calculadora">
+                <div class="calculadora-resultado">
+                    <h1 id="rest"></h1>
                 </div>
-                <div class="calculadora-butao-sinais">
-                    <button>+</button>
-                    <button>-</button>
-                    <button>x</button>
-                    <button>/</button>
+                <div class="calculadora-butao">
+                    <div class="calculadora-butao-numeros">
+                        <div class="butao123">
+                             <button id="1 valor">1</button>
+                             <button id="2 valor">2</button>
+                             <button id="3 valor">3</button>
+                        </div>
+                        <div class="butao456">
+                            <button id="4 valor">4</button>
+                            <button id="5 valor">5</button>
+                            <button id="6 valor">6</button>
+                        </div>
+                        <div class="butao789">
+                            <button id="7 valor">7</button>
+                            <button id="8 valor">8</button>
+                            <button id="9 valor">9</button>
+                        </div>
+                        <div class="butao0">
+                            <button id="0 valor">0</button>
+                            <button id="igual resultado" onclick="somar()">=</button>
+                        </div>
+                        
+                    </div>
+                    <div class="calculadora-butao-sinais">
+                        <button>+</button>
+                        <button>-</button>
+                        <button>x</button>
+                        <button>/</button>
+                    </div>
+                </div>
+            </div>
+            <div class="calculadora2">
+                <div>
+                    <input type="text" class="valor1-1"> <p>+</p> <input type="text" class="valor2-1"> <p>=</p> <section> <p class="resultado2-1"></p></section> <button class="cal-resut2" onclick="somar1()">=</button>
+                </div>
+                <div>
+                    <input type="text" class="valor1-2"> <p>-</p> <input type="text" class="valor2-2"> <p>=</p> <section> <p class="resultado2-2"></p></section> <button class="cal-resut2" onclick="somar2()">=</button>
+                </div>
+                <div>
+                    <input type="text" class="valor1-3"> <p>x</p> <input type="text" class="valor2-3"> <p>=</p> <section> <p class="resultado2-3"></p></section> <button class="cal-resut2" onclick="somar3()">=</button>
+                </div>
+                <div>
+                    <input type="text" class="valor1-4"> <p>/</p> <input type="text" class="valor2-4"> <p>=</p> <section> <p class="resultado2-4"></p></section> <button class="cal-resut2" onclick="somar4()">=</button>
                 </div>
             </div>
         </div>
-        <div class="calculadora2">
-            <div>
-                <input type="text" class="valor1-1"> <p>+</p> <input type="text" class="valor2-1"> <p>=</p> <section> <p class="resultado2-1"></p></section> <button class="cal-resut2" onclick="somar1()">=</button>
-            </div>
-            <div>
-                <input type="text" class="valor1-2"> <p>-</p> <input type="text" class="valor2-2"> <p>=</p> <section> <p class="resultado2-2"></p></section> <button class="cal-resut2" onclick="somar2()">=</button>
-            </div>
-            <div>
-                <input type="text" class="valor1-3"> <p>x</p> <input type="text" class="valor2-3"> <p>=</p> <section> <p class="resultado2-3"></p></section> <button class="cal-resut2" onclick="somar3()">=</button>
-            </div>
-            <div>
-                <input type="text" class="valor1-4"> <p>/</p> <input type="text" class="valor2-4"> <p>=</p> <section> <p class="resultado2-4"></p></section> <button class="cal-resut2" onclick="somar4()">=</button>
+        <div class="container2">
+            <div class="calculadora3" onclick="começar()">
+                <button class="calculadora3-button">Começar</button>
+                <p class="explixacao"> Sera aberto uma aba em seu computador, e a unica coisa que voce deve fazer é colocar os respectivos numeros que você deseja para efetuar as contas de soma, subtração, multiplicação e divisão. Logo depois do questionario, serão entregues os respectivos resultados</p>
             </div>
         </div>
+        
     </main>
     <script>
      
@@ -111,6 +120,24 @@
             var calcular = n1 / n2
 
             valor.innerHTML = calcular
+        }
+
+        function começar(){
+            window.alert('Coloque 2 numeros e te darei o resultado')
+
+            var N1 = Number(window.prompt('Coloque o primeiro numero'))
+            var N2 = Number(window.prompt('Coloque o segundo numero'))
+
+            var soma = N1 + N2
+            var subt = N1 - N2
+            var mul = N1 * N2
+            var divs = N1 / N2
+
+            window.alert(`
+            O resultado de soma: ${soma} 
+            O resultado de divisao: ${subt}
+            O resultado de multiplicação: ${mul}
+            O resultado de divisão: ${divs} `)
         }
 
 
