@@ -13,7 +13,7 @@ body{
     width: 100%;
     height: 200vh;
 
-    background:linear-gradient(to right, rgb(247, 247, 255), blue) ;
+    background:linear-gradient(329deg, rgb(178, 253, 228), green, rgb(75, 75, 248)) ;
 }
 
 main{
@@ -228,6 +228,6 @@ button, input{
     cursor: pointer;
 }
 
-button, input:hover{
-    background-color: rgb(78, 78, 78);
+button:hover, input:hover{
+    background-color: rgb(218, 218, 218);
 }

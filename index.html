@@ -64,113 +64,13 @@
             </div>
         </div>
         <div class="container2">
-            <div class="calculadora3" onclick="começar()">
-                <button class="calculadora3-button">Começar</button>
-                <p class="explixacao"> Sera aberto uma aba em seu computador, e a unica coisa que voce deve fazer é colocar os respectivos numeros que você deseja para efetuar as contas de soma, subtração, multiplicação e divisão. Logo depois do questionario, serão entregues os respectivos resultados</p>
+            <div class="calculadora3">
+                <button class="calculadora3-button" onclick="começar()">Começar</button>
+                <p class="explixacao">Será aberta uma aba em seu computador e a única coisa que você precisa fazer é inserir os números correspondentes para realizar as operações de soma, subtração, multiplicação e divisão. Após completar o questionário, os resultados correspondentes serão fornecidos.</p>
             </div>
         </div>
         
     </main>
-    <script>
-         function clean(){
-         
-            document.getElementById('rest').innerHTML = "" ;
-        }
-
-        function insert(num){
-
-           var numero = document.querySelector('#rest').innerHTML
-           document.querySelector('#rest').innerHTML = numero + num
-
-        }
-
-        function back(){
-            var resultado = document.querySelector('#rest').innerHTML
-            document.querySelector('#rest').innerHTML = resultado.substring(0, resultado.length -1)
-        }
-
-        function somar(){
-            var resultado = document.querySelector('#rest').innerHTML
-            if(resultado){
-                document.querySelector('#rest').innerHTML = eval(resultado)
-            }
-            else{
-                document.querySelector('#rest').innerHTML = "Nada..."
-            }
-        }
-       
-     
-        function somar1(){
-            var button1 = document.querySelector('input.valor1-1')
-            var button2 = document.querySelector('input.valor2-1')            
-            var valor = window.document.querySelector('p.resultado2-1')
-
-            var n1 = Number(button1.value)
-            var n2 = Number(button2.value)
-
-            var calcular = n1 + n2
-
-            valor.innerHTML = calcular
-        }
-
-        function somar2(){
-            var button1 = document.querySelector('input.valor1-2')
-            var button2 = document.querySelector('input.valor2-2')            
-            var valor = window.document.querySelector('p.resultado2-2')
-
-            var n1 = Number(button1.value)
-            var n2 = Number(button2.value)
-
-            var calcular = n1 - n2
-
-            valor.innerHTML = calcular
-        }
-
-        function somar3(){
-            var button1 = document.querySelector("input.valor1-3")
-            var button2 = document.querySelector('input.valor2-3')
-            var valor = window.document.querySelector('p.resultado2-3')
-
-            var n1 = Number(button1.value)
-            var n2 = Number(button2.value)
-
-            var calcular = n1 * n2
-
-            valor.innerHTML = calcular
-        }
-
-        function somar4(){
-            var button1 = document.querySelector("input.valor1-4")
-            var button2 = document.querySelector('input.valor2-4')
-            var valor = window.document.querySelector('p.resultado2-4')
-
-            var n1 = Number(button1.value)
-            var n2 = Number(button2.value)
-
-            var calcular = n1 / n2
-
-            valor.innerHTML = calcular
-        }
-
-        function começar(){
-            window.alert('Coloque 2 numeros e te darei o resultado')
-
-            var N1 = Number(window.prompt('Coloque o primeiro numero'))
-            var N2 = Number(window.prompt('Coloque o segundo numero'))
-
-            var soma = N1 + N2
-            var subt = N1 - N2
-            var mul = N1 * N2
-            var divs = N1 / N2
-
-            window.alert(`
-            O resultado de soma: ${soma} 
-            O resultado de divisao: ${subt}
-            O resultado de multiplicação: ${mul}
-            O resultado de divisão: ${divs} `)
-        }
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
