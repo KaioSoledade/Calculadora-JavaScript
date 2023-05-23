@@ -17,31 +17,34 @@
                 <div class="calculadora-butao">
                     <div class="calculadora-butao-numeros">
                         <div class="butao123">
-                             <button id="1 valor">1</button>
-                             <button id="2 valor">2</button>
-                             <button id="3 valor">3</button>
+                             <button id="1 valor" onclick="insert('1')">1</button>
+                             <button id="2 valor" onclick="insert('2')">2</button>
+                             <button id="3 valor" onclick="insert('3')">3</button>
                         </div>
                         <div class="butao456">
-                            <button id="4 valor">4</button>
-                            <button id="5 valor">5</button>
-                            <button id="6 valor">6</button>
+                            <button id="4 valor" onclick="insert('4')">4</button>
+                            <button id="5 valor" onclick="insert('5')">5</button>
+                            <button id="6 valor" onclick="insert('6')">6</button>
                         </div>
                         <div class="butao789">
-                            <button id="7 valor">7</button>
-                            <button id="8 valor">8</button>
-                            <button id="9 valor">9</button>
+                            <button id="7 valor" onclick="insert('7')">7</button>
+                            <button id="8 valor" onclick="insert('8')">8</button>
+                            <button id="9 valor" onclick="insert('9')">9</button>
                         </div>
                         <div class="butao0">
-                            <button id="0 valor">0</button>
+                            <button id="clear" onclick="clean('0')">C</button>
+                            <button id="0 valor" onclick="insert('0')">0</button>
                             <button id="igual resultado" onclick="somar()">=</button>
                         </div>
                         
                     </div>
                     <div class="calculadora-butao-sinais">
-                        <button>+</button>
-                        <button>-</button>
-                        <button>x</button>
-                        <button>/</button>
+                        <button onclick="insert('+')">+</button>
+                        <button onclick="insert('-')">-</button>
+                        <button onclick="insert('*')">x</button>
+                        <button onclick="insert('/')">/</button>
+                        <button onclick="back()"><</button>
+                        <button onclick="insert('.')">.</button>
                     </div>
                 </div>
             </div>
@@ -56,7 +59,7 @@
                     <input type="text" class="valor1-3"> <p>x</p> <input type="text" class="valor2-3"> <p>=</p> <section> <p class="resultado2-3"></p></section> <button class="cal-resut2" onclick="somar3()">=</button>
                 </div>
                 <div>
-                    <input type="text" class="valor1-4"> <p>/</p> <input type="text" class="valor2-4"> <p>=</p> <section> <p class="resultado2-4"></p></section> <button class="cal-resut2" onclick="somar4()">=</button>
+                    <input type="text" class="valor1-4" "> <p>/</p> <input type="text" class="valor2-4"> <p>=</p> <section> <p class="resultado2-4"></p></section> <button class="cal-resut2" onclick="somar4()">=</button>
                 </div>
             </div>
         </div>
@@ -69,6 +72,33 @@
         
     </main>
     <script>
+         function clean(){
+         
+            document.getElementById('rest').innerHTML = "" ;
+        }
+
+        function insert(num){
+
+           var numero = document.querySelector('#rest').innerHTML
+           document.querySelector('#rest').innerHTML = numero + num
+
+        }
+
+        function back(){
+            var resultado = document.querySelector('#rest').innerHTML
+            document.querySelector('#rest').innerHTML = resultado.substring(0, resultado.length -1)
+        }
+
+        function somar(){
+            var resultado = document.querySelector('#rest').innerHTML
+            if(resultado){
+                document.querySelector('#rest').innerHTML = eval(resultado)
+            }
+            else{
+                document.querySelector('#rest').innerHTML = "Nada..."
+            }
+        }
+       
      
         function somar1(){
             var button1 = document.querySelector('input.valor1-1')

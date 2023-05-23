@@ -58,7 +58,9 @@ main{
     margin: 30px;
 }
 .calculadora-resultado h1{
-    margin: 40px 0 0 10px
+    margin: 40px 10px 0 10px;
+    display: flex;
+    justify-content: end
 }
 
 .calculadora-butao{
@@ -89,8 +91,8 @@ main{
     align-items: center;
 }
 .butao0{
-    margin: 0 0 0 100px;
-    width: 200px;
+  
+    width: 300px;
     height: 100px;
     
     display: flex;
@@ -116,7 +118,7 @@ main{
 
     
     width: 80px;
-    height: 80px;
+    height: 47px;
 }
 
 .calculadora-butao button{
@@ -220,4 +222,12 @@ main{
 
     margin: 100px 0 ;
     line-height: 200%;
+}
+
+button, input{
+    cursor: pointer;
+}
+
+button, input:hover{
+    background-color: rgb(78, 78, 78);
 }
